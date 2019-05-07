@@ -34,7 +34,7 @@ In order to run this app from anywhere in your terminal there is some set up tha
 
    ```touch start_project```  
 
-* Copy the content of start_project.rb in to your new file.  
+* Copy the content of lib/start_project.rb in to your new file.  
 
 * Find out where is your Ruby installed by typing the following anywhere in your terminal:  
 
