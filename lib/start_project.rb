@@ -31,7 +31,14 @@ class Project
   end
 
   def readme
-    system("echo '# #{@project_name.capitalize}'>README.md")
+    system("echo '# #{@project_name.capitalize}\n'>README.md")
+    system("echo '## Specifications\n'>>README.md")
+    system("echo '## Design and code structure approach\n'>>README.md")
+    system("echo '## Getting started\n'>>README.md")
+    system("echo '## Usage\n'>>README.md")
+    system("echo '## Running tests\n'>>README.md")
+    system("echo '## Final thoughts\n'>>README.md")
+    system("echo '## Roadmap'>>README.md")
   end
 
   def gitignore
