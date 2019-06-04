@@ -20,6 +20,7 @@ class Project
       notes      
       lib
       bundle
+      ruby_version
       gems
       rspec
       rubocop
@@ -56,6 +57,10 @@ class Project
 
   def bundle
     system('bundle init')
+  end
+
+  def ruby_version
+    system("echo 'ruby \"2.6.0\"'>>Gemfile")
   end
 
   def gems
