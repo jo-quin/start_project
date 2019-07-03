@@ -1,8 +1,8 @@
-#!/Users/student/.rvm/rubies/ruby-2.6.0/bin/ruby
+#!/home/jo-quin/.rbenv/shims/ruby
 
 class Project
 
-  GEMS = ['rspec', 'rubocop', 'simplecov', 'simplecov-console']
+  GEMS = ['rspec', 'rubocop', 'simplecov', 'simplecov-console', 'aruba']
 
   def initialize(project_name = ARGV[0])
     @project_name = project_name
@@ -60,12 +60,11 @@ class Project
   end
 
   def ruby_version
-    system("echo 'ruby \"2.6.0\"'>>Gemfile")
+    system("echo 'ruby \"2.6.3\"'>>Gemfile")
   end
 
   def gems
-    GEMS.each do |gem|
-      g = gem
+    GEMS.each do |g|
       system("bundle add #{g}")
     end
   end
@@ -73,6 +72,7 @@ class Project
   def rspec
     system('rspec --init')
     system("echo '-f d' >> .rspec")
+    system("echo 'require \"aruba/rspec\"' >>spec/spec_helper.rb")
     system("echo 'require \"simplecov\"
 require \"simplecov-console\"
 SimpleCov.formatter = SimpleCov::Formatter::Console
