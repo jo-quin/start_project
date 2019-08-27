@@ -40,7 +40,7 @@ In order to run this app from anywhere in your terminal there is some set up tha
 
   ```which ruby```  
 
-* Copy the output of ```which ruby``` and amend the [shebang]() on your start_project file. Remember to add ``#!`` at the beginning!  
+* Copy the output of ```which ruby``` and amend the [shebang](https://bash.cyberciti.biz/guide/Shebang) on your start_project file. Remember to add ``#!`` at the beginning!  
 
 That’s it!!! Easy right?!   
 
